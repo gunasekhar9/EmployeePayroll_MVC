@@ -1,0 +1,70 @@
+﻿@model ModelLayer.Services.Employeemodel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link rel="stylesheet" href="~/css/Details.css" />
+<div class="header">
+    <img src="~/Assets/logo.png" />
+    <div><span style="color: #82A70C">EMPLOYEE</span><br /><span style="color: #42515F">PAYROLL</span></div>
+</div>
+<div class="details"><h3>Employee Details</h3></div>
+
+
+<div style="background-color:#F2F3F4">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.emp_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.emp_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.emp_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.emp_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.profile_img)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.profile_img)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.salary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.salary)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.startDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.startDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.notes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.notes)
+        </dd>
+    </dl>
+</div>
+<div class="buttons">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.emp_id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
